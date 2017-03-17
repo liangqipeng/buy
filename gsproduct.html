@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- 倒入第三方样式-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <!--导入less样式-->
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/m-details(danpin).css"/>
+
+    <!-- 引入js-->
+    <script src='lib/less/less.min.js'></script>
+    <title>凑单品</title>
+</head>
+<body>
+
+
+<!--header-->
+<header>
+    <a href="" class="back"><span>&lt;</span></a>
+
+    <p>凑单品</p>
+
+</header>
+<!--header-->
+
+<nav class="clearfix">
+    <div><a href="" id="shop">京东<span>▲</span></a>
+
+    </div>
+    <div><a href="" id="address">华北<span id="trangle">▲</span></a>
+
+    </div>
+    <div><a href="" id="price">一元<span>▲</span></a>
+
+    </div>
+    <div><a href="" id="content">囍</a>
+    </div>
+    <div class="ITEMS">
+        <ul class="items clearfix" id="items1">
+            <li><a href="">京东</a><span>√</span></li>
+            <li><a href="">一号店</a><span>√</span></li>
+            <li><a href="">天猫超市</a><span>√</span></li>
+        </ul>
+        <ul class="items" id="items2">
+            <li><a href="">华北(北京 山西等)</a><span>√</span></li>
+            <li><a href="">华东(浙江 山东等)</a><span>√</span></li>
+            <li><a href="">华南(广东 广西等)</a><span>√</span></li>
+            <li><a href="">华中(湖北 河南等)</a><span>√</span></li>
+            <li><a href="">西南(西川 云南等)</a><span>√</span></li>
+            <li><a href="">东北(辽宁 吉林等)</a><span>√</span></li>
+            <li><a href="">西北(宁夏 新疆等)</a><span>√</span></li>
+        </ul>
+        <ul class="items" id="items3">
+            <li><a href="">1元</a><span>√</span></li>
+            <li><a href="">1~3元</a><span>√</span></li>
+            <li><a href="">3~5元</a><span>√</span></li>
+            <li><a href="">5~8元</a><span>√</span></li>
+            <li><a href="">8~10元</a><span>√</span></li>
+            <li><a href="">10~15元</a><span>√</span></li>
+        </ul>
+        <ul class="items clearfix" id="items4">
+
+            <div class="search"><input type="text" value="输入关键字"/><span>搜索</span></div>
+            <span class="px">排序</span>
+
+            <div class="clearfix list1">
+                <a href="">销量</a>
+                <a href="">价格↑</a>
+                <a href="">价格↓</a>
+            </div>
+            <span class="px">分类</span>
+
+            <div class="list2">
+                <a href="">全部</a>
+                <a href="">家居</a>
+                <a href="">数码</a>
+                <a href="">办公</a>
+            </div>
+            <div class="list3">
+                <a href="">个护</a>
+                <a href="">食品</a>
+                <a href="">母婴</a>
+                <a href="">服饰</a>
+            </div>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="details">
+    <ul class="contains">
+    </ul>
+</div>
+<script type="text/html" id="tplSingle">
+    {{each result as value i}}
+    <li>
+        <a href=""><img src="{{#value.productImg}}" alt=""/></a>
+        <a href="" class="name">{{value.productName}}</a><br/>
+        <a href="" class="price">{{value.productPrice}}</a>
+    </li>
+    {{/each}}
+</script>
+</body>
+<!--引入jq-->
+<script src="lib/jquery/jquery.js"></script>
+<!--引入bootstrap.js-->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!--一引入template.js-->
+<script src="lib/template/template.js"></script>
+<!--引入自己的js-->
+<script src="js/m-details.js"></script>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- 倒入第三方样式-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <!--导入less样式-->
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/details.css"/>
+
+    <!-- 引入js-->
+    <script src = 'lib/less/less.min.js'></script>
+    <title>国内折扣</title>
+</head>
+<body>
+
+
+<!--header-->
+<header >
+    <a href="" class="back"><span>&lt;</span></a>
+    <p>国内折扣</p>
+    <a href="" class="download"><img src="images/header_app.png" alt=""/></a>
+</header>
+<!--header-->
+
+
+
+<!--details-->
+<section class="details">
+    <ul class="contains clearfix">
+    </ul>
+</section>
+<section class="backline">
+    <p>首页&gt;&nbsp;省钱快曝</p>
+</section>
+<!--details-->
+
+
+
+<!--footer-->
+<footer>
+    <div class="top">
+        <ul class="clearfix">
+            <li><a href="">登陆</a></li>
+            <li><a href="">注册</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>返回顶部</a></li>
+        </ul>
+    </div>
+</footer>
+<!--footer-->
+
+</body>
+<script type="text/html" id="MenuTpl">
+{{each result as value i}}
+
+<li>
+    <a href="" class="pic">{{#value.productImg}}</a> <br/>
+    <a href="" class="introduice">{{value.productName}}</a> <br/>
+    <a href="" class="price">{{value.productPrice}}</a> <br/>
+    <a href="" class="address">{{value.productFrom}}</a>
+    <a href="" class="address">{{value.productTime}}</a>
+
+</li>
+
+{{/each}}
+</script>
+
+<!--引入jq-->
+<script src="lib/jquery/jquery.js"></script>
+<!--引入bootstrap.js-->
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<!--一引入template.js-->
+<script src = "lib/template/template.js"></script>
+<!--引入自己的js-->
+<script src = "js/inlanddiscount.js"></script>
+
+</html>

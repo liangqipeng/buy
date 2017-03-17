@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>白菜价-淘宝内部优惠券</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet/less" href="./css/base.less"/>
+    <link rel="stylesheet/less" href="./css/sprice.less"/>
+    <script src="./lib/less/less.min.js"></script>
+</head>
+<body>
+<!-- 网站头部-->
+<header id="header">
+    <div class="row">
+        <div class=" col-xs-2">
+            <a class="back" href="">
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="col-xs-8 ">
+            <p class="toptext">白菜价-淘宝内部优惠券</p>
+        </div>
+        <div class="col-xs-2 ">
+            <a class="download" href=""><img src="./images/header_app.png" alt=""/>
+            </a>
+        </div>
+    </div>
+
+</header>
+
+<!-- 网页菜单栏-->
+<section id="menu">
+    <div class="product" id="product">
+        <ul class="clearfix" id="wp">
+        </ul>
+        <div class="open">
+            <p class="glyphicon glyphicon-list" aria-hidden="true"></p>
+            <!-- 删除按钮的类名   glyphicon glyphicon-remove-->
+        </div>
+    </div>
+    <div class="search">
+        <div class="search-t">
+            <span class="glyphicon glyphicon-search"></span>
+            <input type="text" placeholder="搜索商品即可查内部券"/>
+            <a href="javascript:;">搜索</a>
+        </div>
+    </div>
+
+
+</section>
+
+<!--banner图-->
+<section id="banner">
+    <img src="./images/quan_banner_wap.png" alt=""/>
+</section>
+
+<!--主体栏目-->
+<section id="main">
+    <ul>
+    </ul>
+</section>
+
+<!--底部栏目-->
+<footer id="rated-footer">
+    <div class="rated-footTop">
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="">登录</a>
+            </div>
+            <div class="col-xs-4">
+                <a href="">注册</a>
+            </div>
+            <div class="col-xs-4">
+                <a href="#rated-header">返回顶部</a>
+            </div>
+        </div>
+    </div>
+    <div class="rated-footBottom">
+        <p class="rated-textTop" >
+            <a class="rated-phdow" href="">手机APP下载</a>
+            <a class="rated-phone" href="">慢慢买手机版</a>
+            -掌上比价平台
+        </p>
+        <p class="rated-textButtom" >
+            m.manmanbuy.com
+        </p>
+    </div>
+
+</footer>
+
+</body>
+
+<script type="text/html" id="getIp">
+    {{each result as value i}}
+    <li><a href="#" data_a="{{value.titleId}}">{{value.title}}</a></li>
+    {{/each}}
+</script>
+<script type="text/html" id="setIp">
+    {{each result as value i}}
+    <li>
+        {{#value.productImg}}
+
+        <p class="product-top">
+            {{#value.productName}}
+        </p>
+
+        <div class="money">
+            {{#value.productPrice}}
+        </div>
+        <div class="cloth clearfix">
+            <div class="bln">
+                {{#value.productCoupon}}
+            </div>
+            <div class="utn">
+                {{#value.productHref}}
+            </div>
+        </div>
+        <div class="over">
+            {{#value.productCouponRemain}}
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/jquery/jquery.js"></script>
+<script src="./lib/template/template.js"></script>
+<script src="js/sprice.js"></script>
+</html>

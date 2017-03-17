@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>比价搜索</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet/less" href="css/base.less"/>
+    <link rel="stylesheet/less" href="css/searchprice.less"/>
+    <script src="lib/less/less.min.js"></script>
+</head>
+<body>
+<!--立即安装-->
+<div class="install">
+    <img src="images/logo.png" alt=""/>
+    <div class="">
+        <p>慢慢买比价客户端</p>
+
+        <p>掌控价格不再买贵</p>
+
+        <p>500万人正在使用</p>
+    </div>
+    <a href="javascript:;" id="close"></a>
+    <a href="">立即安装</a>
+</div>
+
+
+<!--顶部-->
+<div class="header ">
+    <a href="" class="logo ">
+        <img src="images/header_logo.png" alt=""/>
+    </a>
+    <a href="" class="app ">
+        <img src="images/header_app.png" alt=""/>
+    </a>
+</div>
+<!--搜索-->
+<form class="form-search search">
+    <input type="text" class="input-medium search-query" placeholder="请输入你行比价的商品">
+    <button type="submit">搜索</button>
+</form>
+
+<!--分类-->
+<section class="rank">
+    <div class="rank_detail">
+        <!--<div class="item">-->
+        <!--<a href="#">平板电视十大品牌</a>-->
+        <!--<div class="box clearfix">-->
+        <!--<div>平板电视</div>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+</section>
+
+<!--底部-->
+<div class="foot">
+    <div class="foottop">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href=""><img src="images/top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footbottom">
+        <p>
+            <a href="">手机APP下载</a>
+            <a href="">慢慢卖手机版</a>
+            <span>--掌上比价平台</span><br/>
+            <a href="">m.manmanbuy.com</a>
+        </p>
+    </div>
+</div>
+
+<!--app下载-->
+<div class="manapp">
+    <div id="gclose"></div>
+    <div></div>
+    <p>慢慢买</p>
+
+    <p>全国比价,查历史价格</p>
+    <a href="">立即打开</a>
+</div>
+
+</body>
+<script type="text/html" id="details">
+    {{each result as value i}}
+    <a href="producilist.html?categoryId={{value.categoryId}}" class="cas">{{value.category}}</a>
+    {{/each}}
+</script>
+
+
+<!--分类模板-->
+<script type="text/html" id="sort">
+    {{each result as value i}}
+    <div class="item">
+        <a href="javascript:;" class="down">{{value.title}}</a>
+
+        <div class="box clearfix" data_item="{{value.titleId}}">
+
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/searchprice.js"></script>
+</html>

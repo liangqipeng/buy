@@ -1,0 +1,260 @@
+header {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  > .header_logo {
+    float: left;
+    padding: 10px;
+    margin-left: 5px;
+    > a {
+      > img {
+        height: 25px;
+      }
+    }
+  }
+  > .header_app {
+    float: right;
+    padding: 7px;
+    > a {
+      > img {
+        height: 34px;
+      }
+    }
+  }
+}
+
+.search {
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.nav {
+  height: 36px;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+
+.productlist {
+  > .product_title,.title {
+    color: #874604;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    > h4 {
+      margin-top: 0;
+      margin-left: 10px;
+      font-size: 16px;
+      line-height: 40px;
+    }
+  }
+  > .category_detail,.detail {
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #fff;
+    >ul {
+      margin-bottom: 10px;
+      >li {
+        border-bottom: 1px solid #e7e7e7;
+        padding: 10px;
+        background-image: url(http://null_241_7689.oschina.io/mmb/code/images/arrow-right.svg);
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: right center;
+        > a{
+          color: #000;
+          text-decoration: none !important;
+          span {
+            background: #c9c9c9;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            line-height: 20px;
+            vertical-align: top;
+            margin: 0 10px 0 0;
+            font-size: 14px;
+          }
+          > .top1 {
+            background: #f10e0e;
+          }
+          > .top2 {
+            background: #ff9314;
+          }
+          > .top3 {
+            background-color: #8adf5b;
+          }
+          > div {
+            display: inline-block;
+            > div {
+              color: #000;
+            }
+            > p {
+              color: #999;
+              margin-top: 3px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  > .product_detail {
+    > .info {
+      display: block;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      > span:nth-of-type(1) {
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 10px;
+        >img {
+          height: 100px;
+          width: 100px;
+        }
+      }
+      > .info_text {
+        display: table-cell;
+        vertical-align: top;
+        color: #23527c;
+
+          > p {
+            font-size: 14px;
+            margin: 0 0 10px;
+          }
+          > p:nth-of-type(2) {
+            margin-top: 0;
+          }
+
+      }
+    }
+  }
+  > .comment_detail {
+    border-bottom: 1px solid #e7e7e7;
+    > ul {
+      > li {
+        border-bottom: 1px solid #e7e7e7;
+        background-image: url('');
+        > a {
+          display: block;
+          color: #000;
+          > .protit {
+            margin-bottom: 10px;
+            > .pic {
+              float: left;
+              margin-right: 10px;
+              > img {
+                vertical-align: middle;
+                width: 100px;
+                height: 100px;
+              }
+            }
+            > .tit {
+              color: #999999;
+              line-height: 22px;
+              font-size: 14px;
+            }
+          }
+          > .discuss::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 29px;
+            top: -8px;
+            border-bottom: 8px solid #e7e7e7;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent
+          }
+          > .discuss::after {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 30px;
+            top: -7px;
+            border-bottom: 8px solid #f8f8f8;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent
+          }
+          > .discuss {
+            background: #f8f8f8;
+            padding: 10px;
+            border: 1px solid #e7e7e7;
+            position: relative;
+            > .name {
+              color: #4f6900;
+              > span.star {
+                margin-top: -4px;
+                display: inline-block;
+                width: 90px;
+                height: 18px;
+                vertical-align: middle;
+                background: transparent;
+                > b {
+                  width: 90px;
+                  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+                  display: inline-block;
+                  height: 18px;
+                  vertical-align: middle;
+                }
+              }
+              > i {
+                color: #999999;
+                float: right;
+                font-style: normal;
+              }
+            }
+            > .content {
+              color: #000000;
+              margin-top: 10px;
+              line-height: 22px;
+              font-size: 15px;
+              font-family: "Microsoft YaHei";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+  clear: both;
+  > div {
+    //margin: 0 -15px 0 -15px;
+    > a {
+      float: left;
+      font-size: 14px;
+      border-right: 1px solid #c4c4c4;
+      text-align: center;
+      width: 30%;
+      > img {
+        width: 15px;
+        height: 15px;
+        margin-top: -5px;
+        margin-right: 2px;
+      }
+    }
+    > a:nth-child(3) {
+      width: 40%;
+    }
+  }
+  > p {
+    height: 17px;
+    margin: 10px;
+    text-align: center;
+    font-size: 12px;
+    > a:first-child {
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+/*header*/
+header{
+    background: #ff841d;
+    height: 44px;
+    width: 100%;
+    position: relative;
+
+}
+header a p{
+    display: block;
+}
+header .back {
+    width: 50px;
+    height: 44px;
+    position: absolute;
+    line-height: 44px;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    left: 24px;
+    top: 0;
+}
+
+header .download{
+    width: 50px;
+    height: 44px;
+    position: absolute;
+    padding-top: 7px;
+    padding-left: 10px;
+    right:0;
+    top: 0px;
+}
+header .download img{
+    width: 30px;
+    height: 30px;
+}
+header p{
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+    line-height: 30px;
+    color: #FFFFFF;
+
+}
+/*header*/
+.details{
+    width: 100%;
+}
+.contains{
+    max-width: 960px;
+    margin: 20px auto;
+}
+.contains li{
+    float:left;
+    width: 100%;
+    max-width: 480px;
+    border: 1px solid #cccccc;
+}
+/*.contains a{*/
+/*display: block;*/
+/*}*/
+.contains img{
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 12px auto;
+
+}
+
+
+
+
+
+
+
+/*Òª¸ÄµÄ.....*/
+.contains li{
+    width: 50%;
+}
+.contains .introduice {
+    display: block;
+    height: 36px;
+    font-size: 12px;
+    color: #000;
+    font-weight: 700;
+    overflow: hidden;
+    line-height: 18px;
+}
+.contains .price{
+    display: block;
+    color: #ff6c00;
+    margin-left: 10px;
+    font-size: 14px;
+    height: 20px;
+    overflow: hidden;
+}
+.contains .address{
+    margin-top: 15px;
+    color: #777;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.backline{
+    margin-top: 20px;
+    background: rgb(247,253,253);
+    height: 36px;
+}
+.backline p{
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    height: 100%;
+    line-height: 36px;
+    font-size: 14px;
+    margin-left: 8px;
+    letter-spacing: 2px;
+}
+/*details*/
+
+
+
+/*footer*/
+.top{
+    margin-top: 20px;
+    width: 100%;
+}
+.top ul{
+    width: 100%;
+}
+.top ul li{
+    float: left;
+}
+.top ul li:nth-child(1){
+    width: 30% ;
+}
+.top ul li:nth-child(2){
+    width: 30% ;
+}
+.top ul li:nth-child(3){
+    width: 40% ;
+    height: 36px;
+}
+.top ul li a{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    line-height: 36px;
+    color: #000;
+}
+.uparrow{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+
+.bottom{
+
+}
+/*footer*/

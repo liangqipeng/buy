@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <!--<link rel="stylesheet" href=""/>-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet/less" href="css/base.less"/>
+    <link rel="stylesheet/less" href="css/particulars.less"/>
+    <script src="lib/less/less.min.js"></script>
+</head>
+<body>
+<!--header Begin-->
+<header>
+    <div class="header_logo">
+        <a href="javascript:void(0);">
+            <img src="./images/header_logo.png" alt="logo"/>
+        </a>
+    </div>
+    <div class="header_app">
+        <a href="javascript:void(0);">
+            <img src="./images/header_app.png" alt="app_download"/>
+        </a>
+    </div>
+</header>
+<!--header End-->
+<!--search Begin-->
+<form class="form-search search">
+    <input type="text" class="input-medium search-query" placeholder="请输入你行比价的商品">
+    <button type="submit">搜索</button>
+</form>
+<!--search End-->
+
+<!--header Begin-->
+<div class="one">
+
+</div>
+<!--注意-->
+<div class="note">
+    * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+</div>
+
+<!--评论-->
+<div class="pl">
+    网友评论
+</div>
+
+
+<div class="two">
+
+</div>
+
+
+
+
+
+
+
+
+<!--更多-->
+
+<div class="more">
+    <a href="#">
+        查看更多评价
+    </a>
+</div>
+
+<!--app-->
+<div class="install">
+    <img src="images/logo.png" alt=""/>
+    <div class="">
+        <span>慢慢买APP</span><br/>
+        <span>给喜欢网购的同学推荐下[慢慢买]这个APP，第一时间更新国内外的优惠信息！</span>
+
+    </div>
+    <a href="javascript:;" id="close"></a>
+    <a href="">立即打开</a>
+</div>
+
+<!--底部-->
+<div class="foot">
+    <div class="foottop">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href=""><img src="images/top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footbottom">
+        <p>
+            <a href="">手机APP下载</a>
+            <a href="">慢慢卖手机版</a>
+            <span>--掌上比价平台</span><br/>
+            <a href="">m.manmanbuy.com</a>
+        </p>
+    </div>
+</div>
+
+<!--app下载-->
+<div class="manapp">
+    <div id="gclose"></div>
+    <div></div>
+    <p>慢慢买</p>
+
+    <p>全国比价,查历史价格</p>
+    <a href="">立即打开</a>
+</div>
+<!--撑开间距-->
+<div class="down" style="height: 60px;"></div>
+
+
+
+
+
+
+</body>
+<script type="text/html" id="first">
+    {{each result as value i}}
+    <section class="nav">
+        <a href="javascript:void(0);">首页</a> &gt;
+        <a href="javascript:void(0);">平板电脑</a> &gt;
+        <a href="javascript:void(0);"><span>{{value.productName}}</span></a>
+    </section>
+    <div class="tvphoto">
+        <div>
+            <!--<img src="images/Thumb_2015080010223719207.jpg" alt="">-->
+            {{#value.productImg}}
+            <a href=""></a>
+        </div>
+        <div class="tvtitle">
+            {{value.productName}}
+        </div>
+        <div>
+            <ul class="clearfix">
+                <li class="price">
+                    <span>最 低 价</span>
+                    : <i>¥3299.00</i>
+                </li>
+                <li class="mall">
+                    <span>最低来自</span>
+                    : <i>苏宁易购</i>
+                </li>
+                <li class="sales">
+                    <span>全网评论</span>
+                    : <i>113953条</i>
+                </li>
+                <li class="comment">
+                    <span>优选评论</span>
+                    : <i>4569条</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="parameter">
+        <a href="">比价购买</a>
+        <a href="">产品参数</a>
+        <a href="">优选评价</a>
+    </div>
+    {{#value.bjShop}}
+    {{/each}}
+</script>
+<script type="text/html" id="second">
+    {{each result as value i}}
+    <table width="100%">
+        <tbody>
+        <tr>
+            <td class="name" align="left" style="font-size:14px; color:#999;">{{value.comName}}</td>
+            <td align="right" style="font-size:14px; color:#999;">{{value.comTime}}</td>
+        </tr>
+        <tr>
+            <td align="left"><span class="starstar"><em class="star5"></em></span></td>
+            <td align="right" style="font-size:14px; color:#999;"> {{value.comFrom}}</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="pj_C">
+                {{value.comContent}}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="pj_C"><a href="discomment.aspx?id=417929&amp;cid=10351392"
+                                            style="font-size:12px; color:#999;padding-top: 10px;">回复</a></td>
+        </tr>
+        </tbody>
+    </table>
+    {{/each}}
+</script>
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/particulars.js"></script>
+</html>
+
+

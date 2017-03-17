@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>优惠券列表</title>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <!--引用样式重置文件-->
+    <link rel="stylesheet/less" href="../css/base.less">
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet/less" href="../css/list.less">
+    <!--引用less.js-->
+    <script src="../lib/less/less.min.js"></script>
+</head>
+<body>
+<!--优惠券头部-->
+<header class="clearfix">
+    <div class="back"><a href="#" class="glyphicon glyphicon-menu-left" id="goback"></a></div>
+    <h1 id="top">肯德基优惠券</h1>
+
+    <div class="app"><a href="http://m.manmanbuy.com/?o=download" class=""></a></div>
+</header>
+<!--优惠券主题列表-->
+<section class="one">
+    <div class="paragraph">
+        --点餐前出示手机中的优惠券，即可享受优惠--
+    </div>
+    <div class="food">
+        <ul id="kfcFood">
+        </ul>
+    </div>
+</section>
+<!--优惠券底部-->
+<footer>
+    <div class="foot-top">
+        <a href="#">登陆</a>
+        <a href="#">注册</a>
+        <a href="#top"><img src="../images/top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot-bottom">
+        <p><a href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a> -- 掌上比价平台</p>
+
+        <p> m.manmanbuy.com</p>
+    </div>
+</footer>
+<!--固定app-->
+<div class="app">
+    <a href="#"><img src="../images/app.png" alt=""/></a>
+</div>
+</body>
+
+<!--引用jq-->
+<script src="../lib/jquery/jquery-1.12.2.js"></script>
+<!--引用bootstrap.js-->
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--引用template.js-->
+<script src="../lib/template/template.js"></script>
+<script type="text/template" id="food">
+    {{each result as value i}}
+    <li class="item{{value.couponProductId}}">
+        <a href="#" class="jump">
+            <div class="food-pic">
+                {{#value.couponProductImg}}
+            </div>
+            <div class="food-message">
+                <h3 class="message">{{value.couponProductName}}</h3>
+
+                <h2 class="price">{{value.couponProductPrice}}</h2>
+
+                <p class="time">{{value.couponProductTime}}</p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="pic">
+
+    <div id="carousel-example-generic" class="carousel slide run" data-ride="carousel">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            {{each result as value i}}
+            <div class="item item{{value.couponProductId}} targetDiv">
+                {{#value.couponProductImg}}
+            </div>
+            {{/each}}
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+</script>
+<!--引用自己的js-->
+<script src="../js/list.js"></script>
+
+</html>

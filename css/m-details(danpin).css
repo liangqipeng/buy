@@ -1,0 +1,234 @@
+/*header*/
+header{
+    background: #ff841d;
+    height: 44px;
+    width: 100%;
+    position: relative;
+
+}
+header a p{
+    display: block;
+}
+header .back {
+    width: 50px;
+    height: 44px;
+    position: absolute;
+    line-height: 44px;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    left: 24px;
+    top: 0;
+}
+
+header p{
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+    line-height: 30px;
+    color: #FFFFFF;
+
+}
+/*header*/
+
+
+/*nav*/
+nav{
+    width: 100%;
+    margin-top: 5px;
+}
+nav div{
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 35px;
+    background: rgb(247,253,253);
+}
+nav div a{
+    height: 100%;
+    font-size: 16px;
+    color: #000;
+    width: 100%;
+    margin-left: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+nav div a span{
+    position: absolute;
+    font-size: 12px;
+}
+.ITEMS{
+    margin-top: 5px;
+    width: 100%;
+}
+/*.ITEMS span{*/
+    /*display: none;*/
+/*}*/
+nav .items {
+    background: #FFFFFF;
+    width: 100%;
+    /*position: absolute;*/
+    top: 65px;
+    /*display: none;*/
+}
+nav .items li a{
+    font-size: 18px;
+    color: #000;
+}
+ li{
+     width: 100%;
+    height: 40px;
+}
+ .items{
+     background: #FFFFFF;
+     display: none;
+ }
+#items1 li{
+    height: 40px;
+    /*border-top: 1px solid #ccc;*/
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+    font-size: 16px;
+    padding-left: 50px;
+    /*display: none;*/
+}
+#items2 li{
+    height: 40px;
+    /*border-top: 1px solid #ccc;*/
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+    font-size: 16px;
+    padding-left: 50px;
+}
+#items1 li span{
+    float: right;
+    margin-right: 20px;
+    display: none;
+}
+#items2 li span{
+    float: right;
+    margin-right: 20px;
+    display: none;
+}
+#items3 li{
+    height: 40px;
+    /*border-top: 1px solid #ccc;*/
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+    font-size: 16px;
+    padding-left: 50px;
+}
+#items3 li span{
+    float: right;
+    margin-right: 20px;
+    display: none;
+}
+#items4 input{
+    height: 40px;
+    width: 90%;
+    text-align: center;
+}
+.search{
+    width: 100%;
+    padding-left: 5px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.px{
+    display: block;
+    margin-top: 50px;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.search span{
+    position: absolute;
+    font-size: 12px;
+    right: 5px;
+    top: 10px;
+}
+.list1 ,.list2, .list3{
+    margin-top: 20px;
+    width: 100%;
+    /*position: relative;*/
+}
+.list1 a{
+    width: 20%;
+    height: 40px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12px;
+    border: 1px solid #ccc
+    /*display: block;*/
+}
+.list1 a:nth-child(2){
+    /*background: #ff841d ;*/
+    color: #000;
+}
+.list3{
+    margin-top: 10px;
+    background: #FFFFFF;
+}
+.list2 a,.list3 a{
+    width: 15%;
+    height:35px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+}
+.list2 a:nth-child(1){
+    /*background: #ff841d ;*/
+    color: #000;
+}
+.current{
+    background: #ff841d ;
+    color: #FFFFFF;
+}
+/*nav*/
+/*details*/
+    .details{
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .details ul{
+        width: 100%;
+    }
+.details ul li{
+    max-width: 480px;
+    height: 250px;
+    width: 185px;
+    margin: 5px;
+    float: left;
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+
+}
+    .details img{
+        width: 180px;
+        height: 180px;
+        display: inline-block;
+    }
+    .details .price{
+        font-size: 18px;
+        color: #ff841d;
+        font-family: "microsoft yahei";
+        font-weight: bold;
+        margin: 5px 10px;
+    }
+.details .name{
+    font-size: 12px;
+    color: #000;
+    margin: 5px 10px;
+    font-width: 900;
+}
+/*details*/
+
+

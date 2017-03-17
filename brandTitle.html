@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<!--开启响应式 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	/>
+	<title>品牌大全</title>
+	<!--引入bootstrap样式-->
+	<link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
+	<!--引入样式重置文件-->
+	<link rel="stylesheet/less" type="text/css" href="css/base.less">
+	<!--引用自己的样式文件-->
+	<link rel="stylesheet/less" type="text/css" href="css/brandTitle.less">
+	<!--引用less.js-->
+	<script type="text/javascript" src="lib/less/less.min.js"></script>
+</head>
+
+<body>
+<!--header Begin-->
+	<header>
+		<div class="header_logo">
+			<a href="javascript:void(0);">
+				<img src="./images/header_logo.png" alt="logo"/>
+			</a>
+		</div>
+		<div class="header_app">
+			<a href="javascript:void(0);">
+				<img src="./images/header_app.png" alt="app_download"/>
+			</a>
+		</div>
+	</header>
+<!--header End-->
+<!--search Begin-->
+	<section class="search" id="search">
+		<form action="#">
+			<input type="search" placeholder="请输入你想比价的商品"/>
+			<input type="submit" value="搜索"/>
+		</form>
+	</section>
+<!--search End-->
+<!--nav Begin-->
+	<section class="nav">
+		<a href="javascript:void(0);">首页</a>
+		&gt;
+		<a href="javascript:void(0);">全部分类</a>
+		&gt;
+		<a href="javascript:void(0);">品牌大全</a>
+	</section>
+<!--nav End-->
+
+<section class="rank">
+	<div class="rank_title">
+		<h4>热门品牌排行</h4>
+	</div>
+	<div class="rank_detail">
+		<!--<div>-->
+			<!--<a href="#">平板电视十大品牌</a>-->
+		<!--</div>-->
+	</div>
+</section>
+
+<!--footer Begin-->
+<footer>
+	<div class="clearfix">
+		<a href="javascript:void(0);">登录</a>
+		<a href="javascript:void(0);">注册</a>
+		<a href="javascript:void(0);"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="回到顶部"/>返回顶部
+		</a>
+	</div>
+	<p><a href="#">手机app下载</a>
+		<a href="#">慢慢买手机版</a>
+		<a href="#">- - 掌上比价平台</a></p>
+	<p>m.manmanbuy.com</p>
+</footer>
+<!--footer End-->
+</body>
+<!-- 创建模板 -->
+<script type="text/html" id="getBrandTitle">
+    {{each result as value i}}
+        <div>
+			<a data-categoryid="{{value.categoryId}}" data-brandtitleid="{{value.brandTitleId}}"  href="brand.html?brandTitleId={{value.brandTitleId}}">
+				{{value.brandTitle}}
+			</a>
+		</div>
+    {{/each}}
+</script>
+<!--引用jQ-->
+<script src="./lib/jQuery/jquery.js"></script>
+<!--引用bootstrap.js-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引用template.js-->
+<script src="./lib/template/template.js"></script>
+<!--引入自己的js-->
+<script src="./js/brandTitle.js"></script>
+
+</html>

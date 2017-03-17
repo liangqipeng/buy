@@ -1,0 +1,123 @@
+@color : #ff841d;
+
+
+#save_header {
+  text-align: center;
+  background-color: @color;
+  color: #fff;
+
+    a{
+      font-size: 10px;
+      display: block;
+      width: 50px;
+      height: 44px;
+      position: relative;
+    }
+    a:nth-of-type(1):before {
+      color: #fff;
+      height: 22px;
+      line-height: 32px;
+      font-size: 30px;
+      content: '<';
+      position: absolute;
+      left: 15px;
+      top: 4px;
+    }
+     a:nth-of-type(2) {
+       background: url(../images/header_app.png) no-repeat center/32px;
+     }
+    h3{
+      display: inline-block;
+      font-size: 22px;
+      line-height: 44px;
+      margin: 0 50px;
+    }
+
+}
+
+
+
+
+.content {
+  display: block;
+  padding: 12px 0;
+  max-width: 960px;
+  margin: 0 auto;
+  .media {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 14px;
+  }
+}
+.media-left {
+    padding: 0 8px;
+   img{
+      display: block;
+      width: 100px;
+      height: 100px;
+     
+   }
+}
+.media-body {
+  font-size: 15px;
+  >span {
+    color: @color;
+  }
+  .meadia-other {
+    margin-top: 50px;
+    font-size: 12px;
+    color: #ccc;
+    
+    .other-talk{
+      margin-right: 15px;
+       i {
+         display: inline-block;
+         width: 14px;
+         height: 14px;
+       }
+    }
+  }
+}
+.save-next {
+  text-align: center;
+  padding-bottom: 10px;
+  .btn {
+    width: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0 26px;
+    padding: 6px 20px;
+  }
+  .btn-group {
+    .form-control{
+      
+        width: 95px;
+    }
+  
+  }
+}
+
+
+.foot-nav {
+  height: 36px;
+  line-height: 36px;
+  padding-left: 15px;
+  margin: 20px 0;
+  font-size: 14px;
+  background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+}
+.foot_phone {
+  padding: 15px 0;
+  text-align: center;
+  p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    a:nth-child(1){
+      color: @color;
+    }
+  }
+}
+

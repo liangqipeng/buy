@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*=========================Reset_start==========================*/
+body,h1,h2,h3,h4,h5,h6,div,p,dl,dt,dd,ol,ul,li,form,table,th,td,a,img,span,strong,var,em,input,textarea,select,option{margin: 0; padding: 0;}
+html,body{font-family:"宋体","微软雅黑",Arail,Tabhoma; font-size: 12px; text-align: left;}
+ul,ol{list-style: none;}
+img{border: 0;}
+input,select,textarea{outline:0;}
+textarea{resize:none; overflow: auto;}
+table{border-collapse: collapse; border-spacing: 0;}
+th,strong,var,em{font-weight: normal; font-style: normal;}
+a{text-decoration: none;}
+* {
+  box-sizing: border-box;
+}
+.clearfix:after {
+            content: "";
+            height: 0;
+            line-height: 0;
+            display: block;
+            clear: both;
+            visibility: hidden;/*将元素隐藏起来*/
+            /*在页面的clearfix元素后面添加了一个空的块级元素（这个元素的高为0，行高也为0，并且这个元素清除了浮动）*/
+        }
+        .clearfix {
+            zoom: 1;
+        }
+
+
+/*==========================Reset_End===========================*/

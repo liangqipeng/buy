@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <!--<link rel="stylesheet" href=""/>-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet/less" href="css/base.less"/>
+    <link rel="stylesheet/less" href="css/index.less"/>
+    <script src="lib/less/less.min.js"></script>
+</head>
+<body>
+<!--顶部-->
+<div class="header ">
+    <a href="" class="logo ">
+        <img src="images/header_logo.png" alt=""/>
+    </a>
+    <a href="" class="app ">
+        <img src="images/header_app.png" alt=""/>
+    </a>
+</div>
+<!--搜索-->
+
+<form class="form-search search">+
+    <input type="text" class="input-medium search-query" placeholder="请输入你行比价的商品">
+    <button type="submit">搜索</button>
+</form>
+<!--选择项-->
+<div class="container-fluid">
+    <div class="row section">
+
+    </div>
+</div>
+
+<!--超折扣推荐    跳至省钱控-->
+<a href="" class="recommend">
+    <div class="holder">
+        <span>超值折扣推荐</span>
+        <img src="images/more.png" alt=""/>
+    </div>
+</a>
+
+<!--推荐的商品   内部border暂时不管 通过js添加-->
+<div class="content">
+
+</div>
+
+<!--更多优惠信息-->
+
+<a href="" class="morefavorable">
+        <span>
+            更多优惠信息 &raquo;
+        </span>
+</a>
+<!--品牌排行-->
+<a href="" class="sort">
+    <div class="holder">
+        <span>品牌排行</span>
+        <img src="images/more.png" alt=""/>
+    </div>
+</a>
+<!--底部-->
+<div class="foot">
+    <div class="foottop">
+        <a href="">登录</a>
+        <a href="">注册</a>
+        <a href=""><img src="images/top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="footbottom">
+        <p>
+            <a href="">手机APP下载</a>
+            <a href="">慢慢卖手机版</a>
+            <span>--掌上比价平台</span><br/>
+            <a href="" >m.manmanbuy.com</a>
+        </p>
+    </div>
+</div>
+    <!--app下载-->
+<a href="" class="download">
+    <img src="images/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" alt=""/>
+</a>
+
+</body>
+<!--功能选择模板-->
+<script type="text/html" id="select">
+    {{each result as value i}}
+    <div class="col-xs-3">
+        <a href="./{{value.titlehref}}">
+            <!--<img src="images/ic_search.png" alt=""/>-->
+            {{#value.img}}
+            <div class="name">{{value.name}}</div>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<!--超值推荐模板-->
+
+<!--!!带#是因为要转换成HTML标签-->
+
+<script type="text/html" id="save_list">
+    {{each result as value i}}
+    <a href="" class="mediaa">
+        <div class="media-left">
+            {{#value.productImgSm}}
+        </div>
+        <div class="media-body">
+            {{#value.productName}}
+            <span>{{value.productPinkage}}</span>
+            <div class="meadia-other">
+                <span class="other-time">{{value.productFrom}} | {{value.productTime}}</span>
+                <span class="other-talk"><i></i>{{getNum(value.productComCount)}}</span>
+            </div>
+        </div>
+    </a>
+    {{/each}}
+</script>
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template/template.js"></script>
+<script src="js/index.js"></script>
+</html>

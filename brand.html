@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!--开启响应式 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            />
+    <title>慢慢买比价网 手机版</title>
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--引入样式重置文件-->
+    <link rel="stylesheet/less" type="text/css" href="css/base.less">
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet/less" type="text/css" href="css/brand.less">
+    <!--引用less.js-->
+    <script type="text/javascript" src="lib/less/less.min.js"></script>
+</head>
+
+<body>
+<!--header Begin-->
+<header>
+    <div class="header_logo">
+        <a href="javascript:void(0);">
+            <img src="./images/header_logo.png" alt="logo"/>
+        </a>
+    </div>
+    <div class="header_app">
+        <a href="javascript:void(0);">
+            <img src="./images/header_app.png" alt="app_download"/>
+        </a>
+    </div>
+</header>
+<!--header End-->
+<!--search Begin-->
+<section class="search" id="search">
+    <form action="#">
+        <input type="search" placeholder="请输入你想比价的商品"/>
+        <input type="submit" value="搜索"/>
+    </form>
+</section>
+<!--search End-->
+<!--nav Begin-->
+<section class="nav">
+    <a href="javascript:void(0);">首页</a>
+    &gt;
+    <a id="back" href="#">品牌大全</a>
+    &gt;
+    <a href="#">平板电视哪个牌子好</a>
+</section>
+<!--nav End-->
+<!--product Begin-->
+<section class="productlist">
+    <div class="product_title">
+        <h4>平板电视哪个牌子好</h4>
+    </div>
+    <div class="category_detail detail">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="top1">1</span>
+                    <div class="text">
+                        <div class="brandname">三星平板电视</div>
+                        <p>30天全网销售：242408件</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="sign" class="category_title title">
+        <h4>平板电视产品销量排行</h4>
+    </div>
+    <div class="product_detail detail">
+        <div class="info">
+            <a href="#">
+                <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="pic"/>
+            </a>
+            <div class="info_text">
+                <a href="#">
+                    <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+                    <p>&yen3266.00</p>
+                    <span>报价(6)</span>
+                    <span>评论(3522)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="comment_title title">
+        <h4>平板电视最新评论</h4>
+    </div>
+    <div class="comment_detail detail">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="protit clearfix">
+                        <div class="pic">
+                            <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg"
+                                 alt="pic"/>
+                        </div>
+                        <div class="tit">乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</div>
+                    </div>
+                    <div class="discuss">
+                        <div class="name">
+                            g***n
+                            <span class="star">
+                                <b class="stars"></b>
+                            </span>
+                            <i>2016/2/18</i>
+                        </div>
+                        <div class="content">
+                            此时乐视X55出现的意义，善之作。加油吧，京东
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--product End-->
+<!--footer Begin-->
+<footer>
+    <div class="clearfix">
+        <a href="javascript:void(0);">登录</a>
+        <a href="javascript:void(0);">注册</a>
+        <a href="javascript:void(0);"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="回到顶部"/>返回顶部
+        </a>
+    </div>
+    <p><a href="#">手机app下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">- - 掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--footer End-->
+</body>
+<!-- 创建模板 -->
+<!--first-->
+<script type="text/html" id="getBrandName">
+    {{each result as value i}}
+    <div class="category_detail detail">
+        <ul>
+            <li>
+                <a href="producilist.html?brandId={{value.brandId}}">
+                    <span class="top{{i + 1}}">{{i + 1}}</span>
+                    <!--<span class="top{{((value.brandId +1) % 10)==0?10:((value.brandId +1) % 10)}}">{{((getNum(value.brandId) + 1) % 10)==0?10:((getNum(value.brandId) + 1) % 10)}}</span>-->
+                    <div class="text">
+                        <div class="brandname">{{value.brandName}}</div>
+                        <p>{{value.brandInfo}}</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    {{/each}}
+</script>
+<!--second-->
+<script type="text/html" id="getProductlist">
+    {{each result as value i}}
+    <a href="particulars.html?productId={{value.productId}}" class="info">
+        <span >
+            {{#value.productImg}}
+        </span>
+        <div class="info_text">
+                <p>{{value.productName}}</p>
+                <p>{{value.productPrice}}</p>
+                <span>{{value.productQuote}}</span>
+                <span>{{value.productCom}}</span>
+        </div>
+    </a>
+    {{/each}}
+    </script>
+<!--third-->
+<script type="text/html" id="getproductcom">
+    {{each result as value i}}
+    <ul>
+        <li>
+            <a href="#">
+                <div class="protit clearfix">
+                    <div class="pic">
+                        {{#result.data.productImg}}
+                    </div>
+                    <div class="tit">{{result.data.productName}}</div>
+                </div>
+                <div class="discuss">
+                    <div class="name">
+                        {{value.comName}}
+                            <span class="star">
+                                <b class="stars"></b>
+                            </span>
+                        <i>{{value.comTime}}</i>
+                    </div>
+                    <div class="content">
+                        {{value.comContent}}
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    {{/each}}
+</script>
+<!--forth-->
+<script type="text/html" id="brandNav">
+    {{each title as value i}}
+        <a href="javascript:void(0);">首页</a>
+        &gt;
+        <a id="back" href="#">品牌大全</a>
+        &gt;
+        <a href="#">{{result.data.brandName}}哪个牌子好</a>
+    {{/each}}
+</script>
+<!--引用jQ-->
+<script src="./lib/jQuery/jquery.js"></script>
+<!--引用jQMobile-->
+<!--<script src="lib/jQuery/jquery.mobile-1.4.5.min.js"></script>-->
+<!--引用bootstrap.js-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引用template.js-->
+<script src="./lib/template/template.js"></script>
+<!--引入自己的js-->
+<script src="./js/brand.js"></script>
+
+</html>

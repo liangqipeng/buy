@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 设置手机窗口-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>慢慢BUY-save</title>
+    <!-- 引入bootstrap-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css" />
+    <!-- 引入重置文件-->
+    <link rel="stylesheet/less" href="./css/base.less" />
+    <!-- 引入主样式-->
+    <link rel="stylesheet/less" href="./css/details.less" />
+    <!-- 引入less文件-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+
+<body>
+    <header id="save_header" class="clearfix">
+        <div>
+            <a href="javascript;;" class="fl back"></a>
+            <h3>省钱控-最新优惠</h3>
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="fr"></a>
+        </div>
+    </header>
+    <div class="details">
+
+    </div>
+    <div class="foot-nav">
+
+    </div>
+
+    <div class="foot">
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">登录</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default">注册</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default toTop"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>返回顶部</button>
+            </div>
+        </div>
+        <div class="gobuy ">
+
+            <a href="# clearfix">
+                <p><span class="glyphicon glyphicon-check" aria-hidden="true"></span></p>
+                <p>评论</p>
+            </a>
+            <a href="#">前往购买</a>
+
+        </div>
+    </div>
+</body>
+    <script type="text/html" id="details_city">
+        {{each result as value i }}
+        <h3>{{value.productName}}</h3>
+        <h4>{{value.productPinkage}}</h4>
+        <div class="details_info">
+            <span>{{value.productFrom}}</span>
+            <span>{{value.productTime}}</span>
+            <span>{{value.productTips}}</span>
+        </div>
+        <div class="details_content">
+            <p>{{value.productInfo}}</p>
+            <p>{{value.productInfo1}}</p>
+            {{#value.productImgSm}}
+        </div>
+        <div class="details_img">
+            {{#value.productImg2}}
+            <div class="details_adres">
+                {{#value.productCity}}
+            </div>
+            <div class="details_buy">
+                <i></i>前往购买
+            </div>
+            {{#value.productComment}} {{/each}}
+        </div>
+    </script>
+    <script type="text/html" id="foot_nav">
+        {{each result as value i}}
+        <p><a href="#">首页</a> &gt; <a href="../save/index.html">省钱控</a> &gt; <span>{{value.productName}}</span>
+        </p>
+        {{/each}}
+    </script>
+    <!--引入jQ-->
+    <script src="lib/jquery/jquery-2.2.2.min.js"></script>
+    <!--引入bootstrap-->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <!--引入template-->
+    <script src="lib/template/template.js"></script>
+    <!--引入主js-->
+    <script src="js/details.js"></script>
+
+</html>
